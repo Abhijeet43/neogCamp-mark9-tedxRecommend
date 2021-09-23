@@ -47,6 +47,10 @@ body {
 }
 
 @media (max-width: 450px) {
+  .container {
+    width: 80%;
+  }
+
   .tedx-list {
     display: flex;
     flex-direction: column;
