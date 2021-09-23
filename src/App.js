@@ -70,7 +70,7 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <h1>Tedx Recommendations</h1>
+        <h1 className="app-title">Tedx Recommendations</h1>
         <ul>
           {tedXnames.map((title) => (
             <li
@@ -84,25 +84,12 @@ export default function App() {
         </ul>
         {title && (
           <div>
-            <ul>
+            <ul className="tedx-list">
               {tedXLibrary[title].map((title) => {
                 return (
-                  <li
-                    style={{
-                      listStyle: "none",
-                      padding: "1rem",
-                      border: "1px solid #D1D5DB",
-                      margin: "1rem",
-                      borderRadius: "0.5rem"
-                    }}
-                    key={title.name}
-                  >
+                  <li className="ted" key={title.name}>
                     <iframe
-                      style={{
-                        minWidth: "50vw",
-                        minHeight: "25vw",
-                        margin: "1rem"
-                      }}
+                      className="ted-frame"
                       src={title.url}
                       title={title.name}
                       allowtransparency="true"
@@ -110,8 +97,8 @@ export default function App() {
                     >
                       {" "}
                     </iframe>
-                    <div style={{ fontSize: "larger" }}> {title.name} </div>
-                    <div style={{ fontSize: "large" }}> {title.rating} </div>
+                    <div className="ted-title"> {title.name} </div>
+                    <div className="ted-rating"> {title.rating} </div>
                   </li>
                 );
               })}
