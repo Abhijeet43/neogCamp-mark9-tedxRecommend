@@ -70,7 +70,7 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <h1 className="app-title">Tedx Recommendations</h1>
+        <h1 className="app-title">Good Tedx</h1>
         <ul>
           {tedXnames.map((title) => (
             <li

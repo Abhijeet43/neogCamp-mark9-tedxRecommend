@@ -47,6 +47,10 @@ body {
 }
 
 @media (max-width: 450px) {
+  .app-title {
+    margin-left: 3rem;
+  }
+
   .container {
     width: 80%;
   }
